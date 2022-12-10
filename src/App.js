@@ -5,11 +5,13 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Customerlist from './components/Customerlist';
 import Trainingslist from './components/Trainingslist';
+import Calendar from './components/Calendar'
 import Home from './components/Home';
 
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
+
 
 function App() {
     const [ value, setValue ] = React.useState('one');
@@ -37,11 +39,15 @@ function App() {
               <Tab value='home' label='Home' />
               <Tab value='customerlist' label='Customers' />
               <Tab value='traininglist' label='Training' />
+              <Tab value='calendar' label='Calendar' />
+             
           </Tabs>
           </AppBar>
         {value === 'home' && <Home />}
 				{value === 'customerlist' && <Customerlist />}
 				{value === 'traininglist' && <Trainingslist />}
+        {value === 'calendar' && <Calendar />}
+        
         </Box>
       </div>
     );
