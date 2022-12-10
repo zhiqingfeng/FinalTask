@@ -11,6 +11,7 @@ import Home from './components/Home';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
+import Statistics from './components/statistics';
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
               <Tab value='customerlist' label='Customers' />
               <Tab value='traininglist' label='Training' />
               <Tab value='calendar' label='Calendar' />
+              <Tab value='statistics' label='Statistics' />
              
           </Tabs>
           </AppBar>
@@ -47,7 +49,7 @@ function App() {
 				{value === 'customerlist' && <Customerlist />}
 				{value === 'traininglist' && <Trainingslist />}
         {value === 'calendar' && <Calendar />}
-        
+        {value === 'statistics' && <Statistics />}
         </Box>
       </div>
     );
